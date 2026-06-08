@@ -5,7 +5,7 @@ namespace ProjectGym.Domain.Interfaces;
 
 public interface IWorkoutSessionRepository : IRepository<WorkoutSession>
 {
-    Task<WorkoutSession?> GetWithTrainerAndAddendancesAsync(int id, CancellationToken cancellationToken = default);
+    Task<WorkoutSession?> GetWithTrainerAndAttendancesAsync(int id, CancellationToken cancellationToken = default);
 
     Task<(IEnumerable<WorkoutSession> Items, int TotalCount)> GetUpcomingPagedAsync(
         int pageNumber,

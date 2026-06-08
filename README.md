@@ -1,2 +1,2 @@
-# projectGym
-Acun Medya akedemi 14. dönem backend sınıf final projesi
+# ProjectGym
+Acunmedya Akademi 14.Dönem Backend Sınıfı Final Projesi

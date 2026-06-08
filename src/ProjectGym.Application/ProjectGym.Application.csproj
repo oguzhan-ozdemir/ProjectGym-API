@@ -6,4 +6,20 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../ProjectGym.Domain/ProjectGym.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOs/Attendance/" />
+    <Folder Include="DTOs/Auth/" />
+    <Folder Include="DTOs/Common/" />
+    <Folder Include="DTOs/Member/" />
+    <Folder Include="DTOs/Membership/" />
+    <Folder Include="DTOs/MembershipPlan/" />
+    <Folder Include="DTOs/Trainer/" />
+    <Folder Include="DTOs/WorkoutSession/" />
+    <Folder Include="Interfaces/" />
+  </ItemGroup>
+
 </Project>

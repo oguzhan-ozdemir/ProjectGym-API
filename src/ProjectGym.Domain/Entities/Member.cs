@@ -12,5 +12,7 @@ public class Member
     public bool IsActive { get; set; } = true;
     public DateTime? LastVisitDate { get; set; }
 
+    public ICollection<Membership> Memberships { get; set; } = [];
+    public ICollection<Attendance> Attendances { get; set; }=[];
 
 }
