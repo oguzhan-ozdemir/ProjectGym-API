@@ -33,7 +33,7 @@ public class Result<T> : IResult
 
     public static Result<T> Success(T value) => new()
     {
-        IsSuccess = false,
+        IsSuccess = true,
         Value = value,
         ErrorType=ResultErrorType.None
     };

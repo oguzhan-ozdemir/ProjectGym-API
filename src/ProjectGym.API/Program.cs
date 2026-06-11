@@ -1,23 +1,28 @@
 using Microsoft.AspNetCore.Identity;
 using ProjectGym.API.Extensions;
+using ProjectGym.API.Filters;
 using ProjectGym.Infrastructure.Data;
 using ProjectGym.Infrastructure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<ApiResponseFilter>();
+});
 builder.Services.AddOpenApi();
+
 
 builder.Services.AddDatabese(builder.Configuration);
 builder.Services.AddIdentityServices();
+builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddRepositories();
+builder.Services.AddApplicationServices();
+builder.Services.AddCorsPolicy(builder.Configuration);
+
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();

@@ -20,6 +20,12 @@
     <Folder Include="DTOs/Trainer/" />
     <Folder Include="DTOs/WorkoutSession/" />
     <Folder Include="Interfaces/" />
+    <Folder Include="Mappings/" />
+    <Folder Include="Services/" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="16.1.1" />
   </ItemGroup>
 
 </Project>
